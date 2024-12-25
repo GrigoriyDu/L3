@@ -18,4 +18,28 @@ public class ListEval implements Eval {
     public ListEval(int givenCount) {
         count = givenCount;
     }
+
+    /**
+     * Метод для измерения времени добавления элементов в ArrayList.
+     *
+     * @return время выполнения в миллисекундах
+     */
+    @Override
+    public long timeAdd() {
+        return measureTime(() -> {
+            initList();
+        });
+    }
+
+    /**
+     * Метод для заполнения ArrayList.
+     */
+    private void initList() {
+        data.clear();
+        for (int i = 0; i < count; i++) {
+            data.add(i);
+        }
+    }
+
+
 }
