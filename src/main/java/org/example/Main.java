@@ -1,7 +1,9 @@
 package org.example;
 
 public class Main {
-    public static void main(String [] Arg){
-        System.out.println("Hello world!!!");
+    public static void main(String[] args) {
+        int count = 150000;
+        Evaluator evaluator = new Evaluator(count);
+        evaluator.displayResults();
     }
 }
