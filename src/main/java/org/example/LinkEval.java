@@ -40,4 +40,18 @@ public class LinkEval implements Eval{
             initList();
         });
     }
+
+    /**
+     * Метод для измерения времени получения элементов из LinkedList.
+     *
+     * @return время выполнения в миллисекундах
+     */
+    @Override
+    public long timeGet() {
+        return measureTime(() -> {
+            for (int i = 0; i < count; i++) {
+                data.get(i);
+            }
+        });
+    }
 }
