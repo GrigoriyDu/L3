@@ -1,13 +1,12 @@
 package org.example;
 
-
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Класс для измерения производительности операций с LinkedList.
  */
-public class LinkEval {
+public class LinkEval implements Eval{
     private List<Integer> data = new LinkedList<>();
     private int count;
 
