@@ -54,4 +54,19 @@ public class LinkEval implements Eval{
             }
         });
     }
+
+    /**
+     * Метод для измерения времени удаления элементов из LinkedList.
+     *
+     * @return время выполнения в миллисекундах
+     */
+    @Override
+    public long timeRemove() {
+        initList();
+        return measureTime(() -> {
+            for (int i = count - 1; i >= 0; i--) {
+                data.remove(i);
+            }
+        });
+    }
 }
