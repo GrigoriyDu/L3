@@ -18,4 +18,26 @@ public class LinkEval implements Eval{
     public LinkEval(int givenCount) {
         count = givenCount;
     }
+
+    /**
+     * Метод для заполнения LinkedList.
+     */
+    private void initList() {
+        data.clear();
+        for (int i = 0; i < count; i++) {
+            data.add(i);
+        }
+    }
+
+    /**
+     * Метод для измерения времени добавления элементов в LinkedList.
+     *
+     * @return время выполнения в миллисекундах
+     */
+    @Override
+    public long timeAdd() {
+        return measureTime(() -> {
+            initList();
+        });
+    }
 }
